@@ -11,5 +11,13 @@ Rails.application.routes.draw do
   # MY OWN ROUTES HERE {
   # get "categories", to: "categories#index"
   # get "categories", to: "categories#show"
-  resources :categories, only: [:index, :show, :new, :create]
+  # IS THE CODE BELOW NEEDED:
+
+  root to: "categories#index"
+  resources :categories, only: [:index, :show, :new, :create] do
+    resources :bookmarks, only: [:new, :create]
+  end
+
+ # resources :bookmarks, only [:destroy]
+# NEED TO THINK THROUGH WHY THE ABOVE IS NOT NESTED
 end

@@ -1,0 +1,9 @@
+<%# <h1>Bookmarked recipes:</h1>
+<ul>
+  <% @Bookmarks.each do |bookmark|%>
+    <%# <li><%= recipe(bookmark.recipe_id).name if bookmark.category_id == @category%>
+ <!-- here I am attempting to march through each
+bookmark and if the category id of that bookmark
+matches the current category then
+the HTML outputs the recipe with the recipe_id
+associated with that bookmark>

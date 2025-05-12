@@ -1,0 +1,8 @@
+<h1>Bookmark a recipe</h1>
+<%= simple_form_for @bookmark do |f| %>
+  <%= f.input :comment %>
+  <%= f.input :recipe_id %>
+  <%= f.input :cateegory_id %>
+<!-- should these be replaced with recipe and name -->
+  <%= f.button :submit %>
+<% end %>
