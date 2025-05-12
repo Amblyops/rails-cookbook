@@ -18,6 +18,5 @@ Rails.application.routes.draw do
     resources :bookmarks, only: [:new, :create]
   end
 
- # resources :bookmarks, only [:destroy]
-# NEED TO THINK THROUGH WHY THE ABOVE IS NOT NESTED
+  resources :bookmarks, only: [:destroy]
 end

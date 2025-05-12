@@ -1,5 +1,11 @@
 <h1>
 <%= @category.name %> Recipes
 </h1>
+<% @category.recipes.each do |recipe| %>
+  <% bookmark = Bookmark.find_by(category: @category, recipe: recipe) %>
+  <p><%= recipe.name %>
+  <%= link_to "delete", bookmark_path(bookmark), data: { turbo_method: :delete, turbo_confirm: "Are you sure you want to remove #{recipe.name} from your #{@category.name} category?"} %></p>
+<!-- how do I redirect to the beginning of show after deleting a recipe?-->
+<% end %>
 <h2>Would you like to add a new category?</h2>
 <p><%= link_to "Add a category", new_category_path %></p>
