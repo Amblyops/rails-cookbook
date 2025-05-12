@@ -9,5 +9,7 @@ Rails.application.routes.draw do
   # root "posts#index"
 
   # MY OWN ROUTES HERE {
-  get "categories", to: "categories#index"
+  # get "categories", to: "categories#index"
+  # get "categories", to: "categories#show"
+  resources :categories, only: [:index, :show, :new, :create]
 end

@@ -1,0 +1,9 @@
+<h1>You have reached the view for the new action...a form is under construction</h1>
+<%= simple_form_for @recipe do |f| %>
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <%= f.input :image_url %>
+  <p>(Image url is optional)</p>
+  <%= f.input :rating %>
+  <%= f.button :submit %>
+<% end %>

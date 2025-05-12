@@ -1,6 +1,7 @@
 <h1>Your available categories are shown below</h1>
 <ul>
   <% @categories.each do |category|%>
+    <%= link_to "Choose:", category_path(category.id) %>
     <li>
       <%= category.name %>
     </li>
