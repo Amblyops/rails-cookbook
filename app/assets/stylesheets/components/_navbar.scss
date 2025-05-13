@@ -11,16 +11,20 @@
   width: 40px;
 }
 
-//.navbar {
-  //background-color: white;
-  //padding: 5px 70px;
-  // img {
-    // width: 60px;
-  //}
-  //color: black;
-  //&hover {
+.navbar {
+  background-color: white;
+  padding: 5px 70px;
+   img {
+     width: 60px;
+  }
+  color: black;
+  &:hover {
     //pICK A NICER COLOUR
-    //color: orange;
+    color: orange;
 // commented out as I'm not sure if it works
-  //}
-//}
+  }
+}
+
+.navbar-logo {
+  width: 50px;
+}

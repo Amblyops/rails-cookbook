@@ -1,20 +1,27 @@
-<!-- I would like a navbar with two links here-->
 
-<!--  <div class = "banner">
-    <div>
-      <h1>BANNER</h1>
-      <h3>save your favourite recipes</h3>
-    </div>
+<!-- W3 schools has a good section on hero-images-->
+
+<div class = "banner", style = "background-image: url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+  <div>
+    <h1>RAILS-COOKBOOK</h1>
+    <h3>Save your favourite recipes</h3>
   </div>
--->
-<div><h1>recipe categories</h1></div>
+</div>
+
 <div>
-  <ul>
-    <% @categories.each do |category|%>
-      <%= link_to "Choose:", category_path(category.id) %>
-      <li>
-        <%= category.name %>
-      </li>
-    <% end %>
-  </ul>
+  <div><h1>recipe categories</h1></div>
+  <div class = "cards">
+    <ol>
+      <% @categories.each do |category|%>
+      <div class = "card-category", style = "background-image: url(https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/breakfast.jpg)">
+        <%= link_to "choose", category_path(category.id) %>
+          <li>
+            <%= category.name %>
+            <%= category.recipes.count %>
+          </li>
+        <% end %>
+      </div>
+
+    </ul>
+  </div>
 </div>
