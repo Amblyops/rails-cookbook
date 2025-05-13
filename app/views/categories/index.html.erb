@@ -1,9 +1,19 @@
-<h1>Your available categories are shown below</h1>
-<ul>
-  <% @categories.each do |category|%>
-    <%= link_to "Choose:", category_path(category.id) %>
-    <li>
-      <%= category.name %>
-    </li>
-  <% end %>
-</ul>
+<div class = "container"><img src=placeholder.jpg alt="Company logo">
+  <div class = "banner" >
+    <h1>BANNER</h1>
+  </div>
+
+  <div>
+    <div><h1>recipe categories</h1></div>
+    <div> <ul>
+        <% @categories.each do |category|%>
+        <%= link_to "Choose:", category_path(category.id) %>
+          <li>
+          <%= category.name %>
+          </li>
+        <% end %>
+      </ul>
+    </div>
+
+  </div>
+</div>
