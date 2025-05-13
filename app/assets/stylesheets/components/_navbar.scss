@@ -10,3 +10,17 @@
 .navbar-lewagon .navbar-brand img {
   width: 40px;
 }
+
+.navbar {
+  background-color: white;
+  padding: 5px 70px;
+  img {
+    width: 60px;
+  }
+  color: black;
+  &hover {
+    //pICK A NICER COLOUR
+    color: orange;
+
+  }
+}

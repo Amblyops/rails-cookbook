@@ -1,19 +1,33 @@
-<div class = "container"><img src=placeholder.jpg alt="Company logo">
-  <div class = "banner" >
-    <h1>BANNER</h1>
+<div><!--class = "container"-->
+  <div class = "navbar"><!--<% image_tag 'logo.png' alt="Company logo">-->
+    <div>
+      <%= link_to 'Home', category_path %>
+      <%= link_to 'New Category', new_category_path %>
+      <!-- NEED TO CHECK PATHS-->
+    </div>
+  </div>
+
+ <!-- style= "background-image: url('<%=image_path "banner.jpg"%>')" >-->
+
+  <div class = "banner">
+    <div>
+      <h1>BANNER</h1>
+      <h3>save your favourite recipes</h3>
+    </div>
   </div>
 
   <div>
     <div><h1>recipe categories</h1></div>
-    <div> <ul>
+    <div>
+      <ul>
         <% @categories.each do |category|%>
-        <%= link_to "Choose:", category_path(category.id) %>
+          <%= link_to "Choose:", category_path(category.id) %>
           <li>
-          <%= category.name %>
+            <%= category.name %>
           </li>
         <% end %>
       </ul>
     </div>
-
   </div>
+
 </div>
