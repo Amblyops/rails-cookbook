@@ -1,6 +1,13 @@
-<h1>Add the name of a new category</h1>
-<%= simple_form_for @category do |f| %>
-  <%= f.input :name %>
-  <%= f.button :submit %>
-<% end %>
-<p><%= link_to "Back", categories_path %></p>
+<div class="flexbox">
+  <div class="form-card">
+    <h2>Add a new Category</h2>
+      <%= simple_form_for @category do |f| %>
+        <%= f.input :name, label: false,  placeholder: "The category name" %>
+         <%= f.input :photo, as: :file %>
+        <div class = "submit-card">
+            <%= f.button :submit %>
+        </div>
+      <% end %>
+  </div>
+</div>
+<p><%= link_to "Back", categories_path, class: "ms-3" %></p>

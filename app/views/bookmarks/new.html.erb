@@ -2,9 +2,6 @@
 <%= simple_form_for [@category, @bookmark] do |f| %>
   <%= f.input :comment %>
 <!--  <%= f.input :recipe, collection: @recipes, value_method: :id, text_method: :name, include_blank: false %>
-BELOW IS THOMAS'S METHOD
-     <%# <%= f.input :category_id, collection: @categories,
-     value_method: :id, text_method: :name, include_blank: false %> -->
  <%= f.association :recipe %>
 
 <!-- should these be replaced with recipe and name -->
